@@ -16,7 +16,7 @@
     "name": "Sebastián",
     "database": "postgres",
     "description": "Una consulta de Sebastián 🙋",
-    "query": "SELECT * FROM Recibe;"
+    "query": "SELECT * FROM hotel;"
   },
   {
     "name": "Quiero todo de mongo 😄",
