@@ -22,13 +22,13 @@
     "name": "Quiero todo de mongo 😄",
     "database": "mongo",
     "description": "...",
-    "query": "myCollection.find()"
+    "query": "collectionName.find()"
   },
   {
     "name": "Insertar a mongo",
     "database": "mongo",
     "description":
       "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-    "query": "myCollection.insert( { \"attribute\": \"value\" } )"
+    "query": "collectionName.insert( { \"attribute\": \"value\" } )"
   }
 ]
