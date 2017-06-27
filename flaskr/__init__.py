@@ -42,7 +42,7 @@ QUERIES_FILENAME = '/var/www/flaskr/queries'
 def home():
     with open(QUERIES_FILENAME, 'r', encoding='utf-8') as queries_file:
         json_file = json.load(queries_file)
-        pairs = [(x["name"],
+        pairs = [(x["name"] + 'mongodb',
                   x["database"],
                   x["description"],
                   x["query"]) for x in json_file]
@@ -52,8 +52,8 @@ def home():
 @app.route("/mongo")
 def mongo():
     query = request.args.get("query")
-    eval('use dbName')
-    results = eval(query)
+
+    results = eval('mongodb.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
         return render_template('mongo.html', results=results)
