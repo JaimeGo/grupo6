@@ -25,13 +25,14 @@ mongodb = client[MONGODATABASE]
 
 # Uncomment for postgres connection
 # REPLACE WITH YOUR DATABASE NAME, USER AND PASS
-POSTGRESDATABASE = "grupo6@bases.ing.puc.cl"
+POSTGRESDATABASE = "grupo6"
 POSTGRESUSER = "grupo6"
 POSTGRESPASS = "grupo6"
 postgresdb = psycopg2.connect(
     database=POSTGRESDATABASE,
     user=POSTGRESUSER,
-    password=POSTGRESPASS)
+    password=POSTGRESPASS,
+    host = 'bases.ing.puc.cl')
 
 
 #Cambiar por Path Absoluto en el servidor
