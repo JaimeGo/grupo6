@@ -52,7 +52,7 @@ def home():
 @app.route("/mongo")
 def mongo():
     query = request.args.get("query")
-    results = eval('mongodbName.'+query)
+    results = eval('mongodb.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
         return render_template('mongo.html', results=results)

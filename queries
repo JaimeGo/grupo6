@@ -20,7 +20,7 @@
   },
   {
     "name": "Quiero todo de mongo 😄",
-    "database": "dbName",
+    "database": "mongo",
     "description": "...",
     "query": "collectionName.find()"
   },
