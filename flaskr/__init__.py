@@ -32,7 +32,8 @@ postgresdb = psycopg2.connect(
     database=POSTGRESDATABASE,
     user=POSTGRESUSER,
     password=POSTGRESPASS,
-    host = 'bases.ing.puc.cl')
+    host = 'localhost',
+    port = 5432)
 
 
 #Cambiar por Path Absoluto en el servidor
