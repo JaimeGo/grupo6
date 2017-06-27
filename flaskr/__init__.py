@@ -53,7 +53,7 @@ def home():
 def mongo():
     query = request.args.get("query")
     eval('use dbName')
-    results = eval('db.'+query)
+    results = eval(query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
         return render_template('mongo.html', results=results)
