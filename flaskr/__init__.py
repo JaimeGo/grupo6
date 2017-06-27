@@ -32,7 +32,7 @@ postgresdb = psycopg2.connect(
     database=POSTGRESDATABASE,
     user=POSTGRESUSER,
     password=POSTGRESPASS,
-    host = 'localhost',
+    host = '146.155.13.141',
     port = 5432)
 
 
