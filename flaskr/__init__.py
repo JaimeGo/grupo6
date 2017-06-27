@@ -42,7 +42,7 @@ QUERIES_FILENAME = '/var/www/flaskr/queries'
 def home():
     with open(QUERIES_FILENAME, 'r', encoding='utf-8') as queries_file:
         json_file = json.load(queries_file)
-        pairs = [(x["name"] + str(mongodb),
+        pairs = [(x["name"] + 'holaamiguinis!' + str(mongodb),
                   x["database"],
                   x["description"],
                   x["query"]) for x in json_file]
