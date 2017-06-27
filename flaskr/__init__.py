@@ -21,7 +21,7 @@ MONGODATABASE = "dbName"
 MONGOSERVER = "localhost"
 MONGOPORT = 27017
 client = MongoClient(MONGOSERVER, MONGOPORT)
-dbName = client[MONGODATABASE]
+mongodb = client[MONGODATABASE]
 
 ''' # Uncomment for postgres connection
 # REPLACE WITH YOUR DATABASE NAME, USER AND PASS
@@ -52,7 +52,8 @@ def home():
 @app.route("/mongo")
 def mongo():
     query = request.args.get("query")
-    results = eval(query)
+    eval('use dbName')
+    results = eval('db.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
         return render_template('mongo.html', results=results)
