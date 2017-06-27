@@ -16,13 +16,13 @@
     "name": "Sebastián",
     "database": "postgres",
     "description": "Una consulta de Sebastián 🙋",
-    "query": "SELECT * FROM mytable WHERE nombre='Sebastián';"
+    "query": "SELECT * FROM Recibe;"
   },
   {
     "name": "Quiero todo de mongo 😄",
     "database": "mongo",
     "description": "...",
-    "query": "collectionName.find({fecha = '2016-10-01'}, {})"
+    "query": "collectionName.find()"
   },
   {
     "name": "Insertar a mongo",

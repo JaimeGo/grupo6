@@ -23,16 +23,16 @@ MONGOPORT = 27017
 client = MongoClient(MONGOSERVER, MONGOPORT)
 mongodb = client[MONGODATABASE]
 
-''' # Uncomment for postgres connection
+# Uncomment for postgres connection
 # REPLACE WITH YOUR DATABASE NAME, USER AND PASS
-POSTGRESDATABASE = "mydatabase"
-POSTGRESUSER = "myuser"
-POSTGRESPASS = "mypass"
+POSTGRESDATABASE = "grupo6"
+POSTGRESUSER = "grupo6"
+POSTGRESPASS = "grupo6"
 postgresdb = psycopg2.connect(
     database=POSTGRESDATABASE,
     user=POSTGRESUSER,
     password=POSTGRESPASS)
-'''
+
 
 #Cambiar por Path Absoluto en el servidor
 QUERIES_FILENAME = '/var/www/flaskr/queries'
@@ -54,7 +54,7 @@ def mongo():
     query = request.args.get("query")
 
     results = eval('mongodb.'+query)
-    results = mongodb.collectionName.find()
+    #results = mongodb.collectionName.find()
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
         return render_template('mongo.html', results=results)
