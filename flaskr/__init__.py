@@ -55,12 +55,8 @@ def home():
 def mongo():
     query = request.args.get("query")
 
-    name_query = request.args.get("name")
-    if name_query == "Dame fecha":
-        results = eval('mongodb.' + query)
-    else:
-        results = eval('mongodb.'+query.format("{'fecha':'2016-10-23'}", "{}"))
-        #results = mongodb.collectionName.find()
+    
+    results = eval('mongodb.' + query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
         return render_template('mongo.html', results=results)
