@@ -89,9 +89,9 @@ def palabra():
 @app.route("/numero")
 def numero():
     numero= request.args.get("numero")
-    #return numero
+    
     entero= request.args.get("entero")
-
+    return entero
     
     results = eval("mongodb.collectionName.find()")
     nuevo = json_util.dumps(results, sort_keys=True, indent=4)
