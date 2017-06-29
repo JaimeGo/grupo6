@@ -3,12 +3,12 @@
 {% block content %}
   <div class="main-container">
     <div class="container">
-      {% for name, db, description, query in results %}
+      {% for nombre, db, description, query in results %}
       {% set algomuysucio = 'onClickQuery("{}","{}")'.format(db, query) %}
 
       <div class="query-card mdl-shadow--2dp">
         <div class="mdl-card__title">
-          <h6>{{db}} - {{name}}</h6>
+          <h6>{{db}} - {{nombre}}</h6>
         </div>
         <div class="mdl-card__supporting-text mdl-card--border">
           <div class="query-card-content">
@@ -26,7 +26,10 @@
             <span>{{query}}</span>
           </div>
           <form action="." method="POST">
+
             <input type="text" name="Input">
+            <input type="text" name="tipo", value = {{nombre}}>
+
             <input type="submit" name="my-form" value="Send">
           </form>
         </div>
