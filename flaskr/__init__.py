@@ -66,6 +66,7 @@ def mongo():
 @app.route("/palabra_clave")
 def palabra_clave():
     palabra = request.args.get("key")
+    return "ok " + str(palabra)
     query = "collectionName.find()"
     
     results = eval('mongodb.'+query)
