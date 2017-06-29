@@ -53,8 +53,12 @@ def home():
 
 @app.route("/mongo")
 def mongo():
-    query = request.args.get("query")
-    
+    nombre = request.args.get("name")
+    query = ''
+    if nombre == "Dame numero":
+        query = "collectionName.find({'numero':'42638939'},{}).sort({'fecha':-1}).limit(2)"
+
+
     results = eval('mongodb.'+query)
     #results = mongodb.collectionName.find()
     results = json_util.dumps(results, sort_keys=True, indent=4)
