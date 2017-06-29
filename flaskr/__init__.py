@@ -66,31 +66,55 @@ def mongo():
 @app.route("/palabra")
 def palabra():
     palabra = request.args.get("key")
-    #return "ok " + str(palabra)
+
     
     results = eval("mongodb.collectionName.find()")
     nuevo = json_util.dumps(results, sort_keys=True, indent=4)
     nuevo2 = json.loads(nuevo)
-    #if isinstance(nuevo2, list):
-    #    return 'hola'
-    #else:
-    #    return render_template('mongo.html', results=nuevo)
-    #results = json.loads(results)
-    #results = mongodb.collectionName.find()
-    #results = json_util.dumps(results, sort_keys=True, indent=4)
+    
     resultado_final = []
     for subdic in nuevo2:
-        #return '0'
+        
         if 'contenido' in subdic.keys():
             if palabra in subdic['contenido']:
-                #return '1'
+
                 resultado_final.append(subdic)
-                #return '4'
-    #return '2'
-    #return len(resultado_final)
+                
     resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
-    #if "find" in query:
+    
     return render_template('mongo.html', results=resultado_final)
+
+
+@app.route("/numero")
+def numero():
+    numero= request.args.get("numero")
+    entero= request.args.get("entero")
+
+    
+    results = eval("mongodb.collectionName.find()")
+    nuevo = json_util.dumps(results, sort_keys=True, indent=4)
+    nuevo2 = json.loads(nuevo)
+    
+    resultado_final = []
+    for subdic in nuevo2:
+        
+        if 'numero' in subdic.keys():
+            if numero == subdic['numero']:
+
+                resultado_final.append(subdic)
+
+    resultado_final.sort(key = lambda x: x['fecha'], reverse = True)
+                
+    resultado_final = json_util.dumps(resultado_final[:entero], sort_keys=True, indent=4)
+    
+    return render_template('mongo.html', results=resultado_final)
+
+
+
+
+
+
+"query": "collectionName.find({'numero':'42638939'},{})"
 
 
 
