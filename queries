@@ -2,24 +2,24 @@
     "name": "Palabra Clave",
     "database": "palabra",
     "description": "Retorna todos los json que tienen en contenido la palabra clave.",
-    "query": "1&key=perrin"
+    "query": "http://query17-6.ing.puc.cl/palabra?key=perrin"
   },
   {
     "name": "Quiero todo de mongo 😄",
     "database": "mongo",
     "description": "...",
-    "query": "collectionName.find()"
+    "query": "http://query17-6.ing.puc.cl/mongo?query=collectionName.find()"
   },
   {
     "name": "Numero y Entero",
     "database": "numero",
     "description": "Dado un Numero X y un Entero N, entrega los N ultimos mensajes del numero X.",
-    "query": "1&numero=93766675&entero=2"
+    "query": "http://query17-6.ing.puc.cl/numero?numero=93766675&entero=2"
   },
   {
     "name": "Fecha",
     "database": "fecha",
     "description": "Dada una fecha entrega los numeros que mandaron un mensaje en tal fecha.",
-    "query": "1&fecha=2017-10-24"
+    "query": "http://query17-6.ing.puc.cl/fecha?fecha=2016-10-24"
   }
 ]
