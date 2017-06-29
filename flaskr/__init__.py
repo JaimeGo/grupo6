@@ -80,11 +80,12 @@ def palabra():
     #results = json_util.dumps(results, sort_keys=True, indent=4)
     resultado_final = []
     for subdic in nuevo2:
+        return '0'
         if palabra in subdic['contenido']:
-            #return '1'
+            return '1'
             resultado_final.append(subdic)
     #return '2'
-    return len(resultado_final)
+    #return len(resultado_final)
     resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
     #if "find" in query:
     return render_template('mongo.html', results=resultado_final)
