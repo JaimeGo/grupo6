@@ -69,6 +69,7 @@ def palabra_clave():
     query = "collectionName.find()"
     
     results = eval('mongodb.'+query)
+    return results
     #results = json.loads(results)
     #results = mongodb.collectionName.find()
     #results = json_util.dumps(results, sort_keys=True, indent=4)
