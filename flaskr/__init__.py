@@ -104,9 +104,7 @@ def numero():
 
                 resultado_final.append(subdic)
     resultado_final.sort(key = lambda x: x['fecha'], reverse = True)
-    return '1'
     resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
-    return '2'
     return render_template('mongo.html', results=resultado_final)
 
 
