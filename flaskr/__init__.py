@@ -54,14 +54,16 @@ def home():
 @app.route('/', methods=['POST'])
 def my_form_post():
 
-    text = request.form['Input']
     tipo = request.form['tipo']
     tipo_processed = tipo.lower()
     if tipo_processed == 'fecha':
+        text = request.form['Input']
         return redirect("http://query17-6.ing.puc.cl/fecha?fecha={}".format(text))
     elif tipo_processed == 'palabra':
+        text = request.form['Input']
         return redirect("http://query17-6.ing.puc.cl/palabra?key={}".format(text))
     elif tipo_processed == 'numero':
+        text = request.form['Input']
         text2 = request.form['Input2']
         return redirect("http://query17-6.ing.puc.cl/numero?numero={}&entero={}".format(text, text2))
     else:
