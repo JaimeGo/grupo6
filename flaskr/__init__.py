@@ -63,8 +63,8 @@ def mongo():
     else:
         return "ok"
 
-@app.route("/palabra_clave")
-def palabra_clave():
+@app.route("/palabra")
+def palabra():
     palabra = request.args.get("key")
     return "ok " + str(palabra)
     query = "collectionName.find()"
