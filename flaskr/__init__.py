@@ -55,8 +55,19 @@ def home():
 def my_form_post():
 
     text = request.form['Input']
-    processed_text = text.upper()
-    return processed_text
+    tipo = request.form['tipo']
+    tipo_processed = tipo.lower()
+    if tipo_processed == 'fecha':
+        pass
+    elif tipo_processed == 'palabra':
+        pass
+    elif tipo_processed == 'numero':
+        pass
+    else:
+        return redirect("http://query17-6.ing.puc.cl/mongo?query=collectionName.find()")
+        
+
+    
 
 @app.route("/mongo")
 def mongo():
