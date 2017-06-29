@@ -69,11 +69,9 @@ def mongo():
     query = "collectionName.find()"
     
     results = eval('mongodb.'+query)
-    results = json.loads(results)
+    #results = json.loads(results)
     #results = mongodb.collectionName.find()
     #results = json_util.dumps(results, sort_keys=True, indent=4)
-    if isinstance(results, dict):
-        return 'ok'
     resultado_final = []
     for subdic in results:
         if palabra in subdic['contenido']:
