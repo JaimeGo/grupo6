@@ -105,9 +105,9 @@ def numero():
 
                 resultado_final.append(subdic)
     resultado_final.sort(key = lambda x: datetime.strptime(x['fecha'], "%d-%m-%y"), reverse = True)
-         
-    resultado_final = json_util.dumps(resultado_final[:int(entero)], sort_keys=True, indent=4)
     
+    resultado_final = json_util.dumps(resultado_final[:int(entero)], sort_keys=True, indent=4)
+    return '2'
     return render_template('mongo.html', results=resultado_final)
 
 
