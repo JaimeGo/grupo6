@@ -2,7 +2,7 @@
     "name": "Dame todo con una palabra clave",
     "database": "mongo",
     "description": "da todos los json que tienen en contenido la palabra clave",
-    "query": "collectionName.find({$text:{$search:"\\"perrin\\""}},{})"
+    "query": "collectionName.find({$text:{$search:'\\'perrin\\''}},{})"
   },
   {
     "name": "Quiero todo de mongo 😄",
