@@ -71,11 +71,12 @@ def palabra_clave():
     results = eval('mongodb.'+query)
     #results = json.loads(results)
     #results = mongodb.collectionName.find()
-    results = json_util.dumps(results, sort_keys=True, indent=4)
+    #results = json_util.dumps(results, sort_keys=True, indent=4)
     resultado_final = []
     for subdic in results:
         if palabra in subdic['contenido']:
             resultado_final.append(subdic)
+    resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
     if "find" in query:
         return render_template('mongo.html', results=resultado_final)
     else:
