@@ -26,9 +26,14 @@
               <i class="material-icons">keyboard_arrow_up</i>
             </button>
           </div>
+
           <div class="query-card-code">
             <span>{{query}}</span>
           </div>
+          <form action="." method="POST">
+            <input type="text" name="Input">
+            <input type="submit" name="my-form" value="Send">
+          </form>
         </div>
       </div>
       {% endfor %}
