@@ -80,7 +80,7 @@ def palabra():
     #results = json_util.dumps(results, sort_keys=True, indent=4)
     resultado_final = []
     for subdic in nuevo2:
-        return '0'
+        #return '0'
         if palabra in subdic['contenido']:
             return '1'
             resultado_final.append(subdic)
