@@ -71,7 +71,7 @@ def mongo():
     results = eval('mongodb.'+query)
     #results = json.loads(results)
     #results = mongodb.collectionName.find()
-    #results = json_util.dumps(results, sort_keys=True, indent=4)
+    results = json_util.dumps(results, sort_keys=True, indent=4)
     resultado_final = []
     for subdic in results:
         if palabra in subdic['contenido']:
