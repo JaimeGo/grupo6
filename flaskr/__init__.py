@@ -8,6 +8,7 @@ from bson import json_util
 from pymongo import MongoClient
 from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
+from datetime import datetime
 
 
 def create_app():
@@ -104,7 +105,7 @@ def numero():
 
                 resultado_final.append(subdic)
 
-    resultado_final.sort(key = lambda x: x['fecha'], reverse = True)
+    resultado_final.sort(key = lambda x: datetime.strptime(x['fecha'], "%d-%m-%y"), reverse = True)
                 
     resultado_final = json_util.dumps(resultado_final[:entero], sort_keys=True, indent=4)
     
