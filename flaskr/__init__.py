@@ -84,7 +84,7 @@ def palabra():
             #return '1'
             resultado_final.append(subdic)
     #return '2'
-    return resultado_final
+    return len(resultado_final)
     resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
     #if "find" in query:
     return render_template('mongo.html', results=resultado_final)
