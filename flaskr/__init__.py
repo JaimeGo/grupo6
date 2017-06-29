@@ -58,11 +58,12 @@ def my_form_post():
     tipo = request.form['tipo']
     tipo_processed = tipo.lower()
     if tipo_processed == 'fecha':
-        pass
+        return redirect("http://query17-6.ing.puc.cl/fecha?fecha={}".format(text))
     elif tipo_processed == 'palabra':
-        pass
+        return redirect("http://query17-6.ing.puc.cl/palabra?key={}".format(text))
     elif tipo_processed == 'numero':
-        pass
+        text2 = request.form['Input2']
+        return redirect("http://query17-6.ing.puc.cl/numero?numero={}&entero={}".format(text, text2))
     else:
         return redirect("http://query17-6.ing.puc.cl/mongo?query=collectionName.find()")
         

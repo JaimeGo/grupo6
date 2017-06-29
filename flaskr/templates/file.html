@@ -26,8 +26,10 @@
             <span>{{query}}</span>
           </div>
           <form action="." method="POST">
-
             <input type="text" name="Input">
+            {% if nombre == 'numero' %}
+            <input type="text" name="Input2">
+            {% endif %}
             <input type="hidden" name="tipo", value = {{nombre}}>
 
             <input type="submit" name="my-form" value="Send">
