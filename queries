@@ -1,11 +1,11 @@
 [
   {
-  "name": "Dame todo con una palabra clave",
-  "database": "mongo",
-  "description": "da todos los json que tienen en contenido la palabra clave",
+    "name": "Dame todo con una palabra clave",
+    "database": "mongo",
+    "description": "da todos los json que tienen en contenido la palabra clave",
     "query": "collectionName.find({$text:{$search:'\'perrin\''}},{})"
   },
-    {
+  {
     "name": "Quiero todo de mongo 😄",
     "database": "mongo",
     "description": "...",
@@ -18,9 +18,9 @@
     "query": "collectionName.find({'numero':'42638939' },{}).sort({'fecha':-1}).limit(2)"
   },
   {
-"name": "Dame fecha",
-"database": "mongo",
-"description": "Dame una fecha y te digo los mensajes de esa fecha",
-"query": "collectionName.find({'fecha':'2016-10-24'},{'contenido':1, 'fecha':1, 'numero':1, 'ciudad':1})"
+    "name": "Dame fecha",
+    "database": "mongo",
+    "description": "Dame una fecha y te digo los mensajes de esa fecha",
+    "query": "collectionName.find({'fecha':'2016-10-24'},{'contenido':1, 'fecha':1, 'numero':1, 'ciudad':1})"
   }
 ]
