@@ -69,6 +69,7 @@ def palabra():
     #return "ok " + str(palabra)
     
     results = eval("mongodb.collectionName.find()")
+    nuevo = json.dumps(results)
     nuevo = json.loads(results)
     if isinstance(nuevo, list):
         return 'hola'
