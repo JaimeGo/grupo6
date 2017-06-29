@@ -108,6 +108,23 @@ def numero():
     return render_template('mongo.html', results=resultado_final)
 
 
+@app.route("/fecha")
+def fecha():
+    fecha= request.args.get("fecha")
+    
+    results = eval("mongodb.collectionName.find()")
+    nuevo = json_util.dumps(results, sort_keys=True, indent=4)
+    nuevo2 = json.loads(nuevo)
+    
+    resultado_final = []
+    for subdic in nuevo2:
+        
+        if 'fecha' in subdic.keys():
+            if fecha == subdic['fecha']:
+
+                resultado_final.append(subdic)
+    resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
+    return render_template('mongo.html', results=resultado_final)
 
 
 
