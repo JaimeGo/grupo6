@@ -82,8 +82,9 @@ def palabra():
     for subdic in nuevo2:
         #return '0'
         if palabra in subdic['contenido']:
-            return '1'
+            #return '1'
             resultado_final.append(subdic)
+            return '4'
     #return '2'
     #return len(resultado_final)
     resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
