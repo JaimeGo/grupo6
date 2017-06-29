@@ -83,7 +83,7 @@ def palabra():
                 
     resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
     
-    return render_template('mongo.html', results=resultado_final)
+    return resultado_final
 
 
 @app.route("/numero")
