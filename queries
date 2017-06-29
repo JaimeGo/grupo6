@@ -1,7 +1,7 @@
 [ {
     "name": "Palabra Clave",
     "database": "palabra",
-    "description": "Retorna todos los json que tienen en contenido la palabra clave",
+    "description": "Retorna todos los json que tienen en contenido la palabra clave.",
     "query": "1&key=perrin"
   },
   {
@@ -11,15 +11,15 @@
     "query": "collectionName.find()"
   },
   {
-    "name": "Dame numero",
-    "database": "mongo",
-    "description": "segun un numero y un entero 2 entrega los n ultimos mensajes del numero",
-    "query": "collectionName.find({'numero':'42638939'},{})"
+    "name": "Numero y Entero",
+    "database": "numero",
+    "description": "Dado un Numero X y un Entero N, entrega los N ultimos mensajes del numero X.",
+    "query": "1&numero?numero=93766675&entero=2"
   },
   {
-    "name": "Dame fecha",
-    "database": "mongo",
-    "description": "Dame una fecha y te digo los mensajes de esa fecha",
-    "query": "collectionName.find({'fecha':'2016-10-24'},{'contenido':1, 'fecha':1, 'numero':1, 'ciudad':1})"
+    "name": "Fecha",
+    "database": "fecha",
+    "description": "Dada una fecha entrega los numeros que mandaron un mensaje en tal fecha.",
+    "query": "1&fecha?fecha=2017-10-24"
   }
 ]
