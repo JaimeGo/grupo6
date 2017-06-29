@@ -51,6 +51,12 @@ def home():
                   x["query"]) for x in json_file]
         return render_template('file.html', results=pairs)
 
+@app.route('/', methods=['POST'])
+def my_form_post():
+    
+    text = request.form['Input']
+    # processed_text = text.upper()
+    return processed_text
 
 @app.route("/mongo")
 def mongo():
