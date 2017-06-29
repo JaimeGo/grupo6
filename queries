@@ -16,6 +16,6 @@
 "name": "Dame fecha",
 "database": "mongo",
 "description": "Dame una fecha y te digo los mensajes de esa fecha",
-"query": "collectionName.find({fecha:{0},{})"
+"query": "collectionName.find({},{})"
   }
 ]
