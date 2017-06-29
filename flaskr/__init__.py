@@ -87,7 +87,7 @@ def mongo():
 @app.route("/palabra")
 def palabra():
     palabra = request.args.get("key")
-
+    return palabra.lower()
     
     results = eval("mongodb.collectionName.find()")
     nuevo = json_util.dumps(results, sort_keys=True, indent=4)
