@@ -87,7 +87,7 @@ def mongo():
 @app.route("/palabra")
 def palabra():
     palabra = request.args.get("key")
-    return palabra.lower()
+    #return palabra.lower()
     
     results = eval("mongodb.collectionName.find()")
     nuevo = json_util.dumps(results, sort_keys=True, indent=4)
@@ -97,7 +97,7 @@ def palabra():
     for subdic in nuevo2:
         
         if 'contenido' in subdic.keys():
-            if palabra.lower in subdic['contenido'].lower:
+            if palabra.lower() in subdic['contenido'].lower():
 
                 resultado_final.append(subdic)
                 
