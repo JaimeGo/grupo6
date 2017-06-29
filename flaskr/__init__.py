@@ -57,7 +57,7 @@ def mongo():
 
     name_query = request.args.get("name")
     if name_query == "Dame fecha":
-        results = eval('mongodb.' + query.format("{fecha:'2016-10-24'}", "{contenido:1,fecha:1}"))
+        results = eval('mongodb.' + query.format("{fecha:'2016-10-23'}", "{contenido:1,fecha:1}"))
         print(query)
     else:
         results = eval('mongodb.'+query)
