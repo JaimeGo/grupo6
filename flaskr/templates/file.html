@@ -26,9 +26,18 @@
             <span>{{query}}</span>
           </div>
           <form action="." method="POST">
-            <input type="text" name="Input">
+            {% if db == "numero" %}
+            {% holdeador = "Numero" %}
+            {% elif db == "fecha" %}
+            {% holdeador = "Fecha" %}
+            {% elif db == "palabra" %}
+            {% holdeador = "Palabra" %}
+            {% endif %}
+            {%if db != "mongo" %}
+            <input type="text" name="Input" placeholder={{holdeador}}>
+            {% endif %}
             {% if "numero" == db %}
-            <input type="text" name="Input2">
+            <input type="text" name="Input2" placeholder="Entero">
             {% endif %}
             <input type="hidden" name="tipo", value = {{db}}>
 
