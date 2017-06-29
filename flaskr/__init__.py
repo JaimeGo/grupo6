@@ -91,8 +91,7 @@ def numero():
     numero= request.args.get("numero")
     
     entero= request.args.get("entero")
-    return entero
-    
+
     results = eval("mongodb.collectionName.find()")
     nuevo = json_util.dumps(results, sort_keys=True, indent=4)
     nuevo2 = json.loads(nuevo)
@@ -106,8 +105,8 @@ def numero():
                 resultado_final.append(subdic)
     resultado_final.sort(key = lambda x: datetime.strptime(x['fecha'], "%d-%m-%y"), reverse = True)
     
-    resultado_final = json_util.dumps(resultado_final[:int(entero)], sort_keys=True, indent=4)
-    return '2'
+    resultado_final = json_util.dumps(resultado_final[:2], sort_keys=True, indent=4)
+    #return '2'
     return render_template('mongo.html', results=resultado_final)
 
 
