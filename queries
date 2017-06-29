@@ -2,7 +2,7 @@
     "name": "Palabra Clave",
     "database": "palabra",
     "description": "Retorna todos los json que tienen en contenido la palabra clave",
-    "query": "key=perrin"
+    "query": "1&key=perrin"
   },
   {
     "name": "Quiero todo de mongo 😄",
