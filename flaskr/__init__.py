@@ -67,10 +67,9 @@ def mongo():
 def palabra():
     palabra = request.args.get("key")
     #return "ok " + str(palabra)
-    query = "collectionName.find()"
     
-    results = eval('mongodb.'+query)
-    return results
+    results = eval("mongodb.collectionName.find()")
+    return render_template('mongo.html', results=json_util.dumps(results, sort_keys=True, indent=4))
     #results = json.loads(results)
     #results = mongodb.collectionName.find()
     #results = json_util.dumps(results, sort_keys=True, indent=4)
