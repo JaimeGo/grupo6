@@ -81,12 +81,13 @@ def palabra():
     resultado_final = []
     for subdic in nuevo2:
         if palabra in subdic['contenido']:
+            #return '1'
             resultado_final.append(subdic)
+    #return '2'
     resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
-    if "find" in query:
-        return render_template('mongo.html', results=resultado_final)
-    else:
-        return "ok"
+    #if "find" in query:
+    return render_template('mongo.html', results=resultado_final)
+
 
 
 @app.route("/postgres")
