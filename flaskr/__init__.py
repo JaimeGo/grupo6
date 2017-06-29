@@ -88,7 +88,7 @@ def palabra():
 @app.route("/numero")
 def numero():
     numero= request.args.get("numero")
-    return numero
+    #return numero
     entero= request.args.get("entero")
 
     
