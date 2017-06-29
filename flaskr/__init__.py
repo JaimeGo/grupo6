@@ -54,12 +54,30 @@ def home():
 @app.route("/mongo")
 def mongo():
     query = request.args.get("query")
-    
+
     results = eval('mongodb.'+query)
     #results = mongodb.collectionName.find()
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
         return render_template('mongo.html', results=results)
+    else:
+        return "ok"
+
+@app.route("/palabra_clave")
+def mongo():
+    palabra = request.args.get("key")
+    query = "collectionName.find()"
+    
+    results = eval('mongodb.'+query)
+    #results = mongodb.collectionName.find()
+    results = json_util.dumps(results, sort_keys=True, indent=4)
+
+    resultado_final = []
+    for subdic in results:
+        if palabra in subdic['contenido']:
+            resultado_final.append(subdic)
+    if "find" in query:
+        return render_template('mongo.html', results=results_final)
     else:
         return "ok"
 
