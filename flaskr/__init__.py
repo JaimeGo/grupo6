@@ -71,15 +71,15 @@ def palabra():
     results = eval("mongodb.collectionName.find()")
     nuevo = json_util.dumps(results, sort_keys=True, indent=4)
     nuevo2 = json.loads(nuevo)
-    if isinstance(nuevo2, list):
-        return 'hola'
-    else:
-        return render_template('mongo.html', results=nuevo)
+    #if isinstance(nuevo2, list):
+    #    return 'hola'
+    #else:
+    #    return render_template('mongo.html', results=nuevo)
     #results = json.loads(results)
     #results = mongodb.collectionName.find()
     #results = json_util.dumps(results, sort_keys=True, indent=4)
     resultado_final = []
-    for subdic in results:
+    for subdic in nuevo2:
         if palabra in subdic['contenido']:
             resultado_final.append(subdic)
     resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
