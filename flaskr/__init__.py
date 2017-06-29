@@ -69,7 +69,10 @@ def palabra():
     #return "ok " + str(palabra)
     
     results = eval("mongodb.collectionName.find()")
-    return render_template('mongo.html', results=json_util.dumps(results, sort_keys=True, indent=4))
+    if isinstance(results, list):
+        return 'hola'
+    else:
+        return render_template('mongo.html', results=json_util.dumps(results, sort_keys=True, indent=4))
     #results = json.loads(results)
     #results = mongodb.collectionName.find()
     #results = json_util.dumps(results, sort_keys=True, indent=4)
