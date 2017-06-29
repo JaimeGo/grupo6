@@ -97,7 +97,7 @@ def palabra():
     for subdic in nuevo2:
         
         if 'contenido' in subdic.keys():
-            if palabra in subdic['contenido']:
+            if palabra.lower in subdic['contenido'].lower:
 
                 resultado_final.append(subdic)
                 
