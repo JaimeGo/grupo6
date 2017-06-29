@@ -1,4 +1,10 @@
 [ {
+    "name": "Quiero todo de mongo 😄",
+    "database": "mongo",
+    "description": "...",
+    "query": "collectionName.find()"
+  },
+  {
     "name": "Dame numero",
     "database": "mongo",
     "description": "segun un numero y un entero 2 entrega los n ultimos mensajes del numero",
