@@ -122,7 +122,7 @@ def fecha():
         if 'fecha' in subdic.keys():
             if fecha == subdic['fecha']:
 
-                resultado_final.append(subdic)
+                resultado_final.append(subdic['numero'])
     resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
     return render_template('mongo.html', results=resultado_final)
 
