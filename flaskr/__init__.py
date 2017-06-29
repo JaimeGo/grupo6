@@ -115,7 +115,7 @@ def numero():
 
 
 
-"query": "collectionName.find({'numero':'42638939'},{})"
+#"query": "collectionName.find({'numero':'42638939'},{})"
 
 
 
