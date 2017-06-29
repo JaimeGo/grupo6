@@ -1,4 +1,9 @@
-[
+[ {
+    "name": "Dame numero",
+    "database": "mongo",
+    "description": "segun un numero y un entero 2 entrega los n ultimos mensajes del numero",
+    "query": "collectionName.find({'numero':'42638939' },{}).sort({'fecha':-1}).limit(2)"
+  },
   {
     "name": "Dame fecha",
     "database": "mongo",
