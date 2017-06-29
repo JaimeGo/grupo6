@@ -53,9 +53,9 @@ def home():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-    
+
     text = request.form['Input']
-    # processed_text = text.upper()
+    processed_text = text.upper()
     return processed_text
 
 @app.route("/mongo")
