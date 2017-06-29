@@ -27,7 +27,7 @@
           </div>
           <form action="." method="POST">
             <input type="text" name="Input">
-            {% if db.lower == "numero" %}
+            {% if "numero" in db.lower %}
             <input type="text" name="Input2">
             {% endif %}
             <input type="hidden" name="tipo", value = {{db}}>
