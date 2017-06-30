@@ -102,7 +102,7 @@ def palabra():
                 resultado_final.append(subdic)
                 
     resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
-    return '1'
+    #return '1'
     return resultado_final
 
 
