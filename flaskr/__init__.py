@@ -88,7 +88,7 @@ def mongo():
 def palabra():
     palabra = request.args.get("key")
     return palabra.lower()
-    
+    return '1'
     results = eval("mongodb.collectionName.find()")
     nuevo = json_util.dumps(results, sort_keys=True, indent=4)
     nuevo2 = json.loads(nuevo)
