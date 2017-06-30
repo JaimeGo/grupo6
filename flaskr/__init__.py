@@ -87,8 +87,8 @@ def mongo():
 @app.route("/palabra")
 def palabra():
     palabra = request.args.get("key")
-    return palabra.lower()
-    return '1'
+    #return palabra.lower()
+    #return '1'
     results = eval("mongodb.collectionName.find()")
     nuevo = json_util.dumps(results, sort_keys=True, indent=4)
     nuevo2 = json.loads(nuevo)
@@ -102,7 +102,7 @@ def palabra():
                 resultado_final.append(subdic)
                 
     resultado_final = json_util.dumps(resultado_final, sort_keys=True, indent=4)
-    
+    return '1'
     return resultado_final
 
 
